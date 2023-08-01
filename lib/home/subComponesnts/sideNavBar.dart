@@ -13,24 +13,47 @@ class SideNavBar extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            IconButton(icon: Row(
-              children: [
-                Icon(Icons.ac_unit_outlined),
-
-              ],
-            ), onPressed: () { },),
-            NavButton(onTap: (){}, title: 'Product',),
-            NavButton(onTap: (){}, title: 'Category',),
-            NavButton(onTap: (){}, title: 'Orders',),
-            NavButton(onTap: (){}, title: 'Cart',),
-            const Card(
-              child: SizedBox(
-                width: 180,
-                height: 200,
-              ),
-
+            IconButton(
+              icon: const Icon(Icons.ac_unit_outlined),
+              onPressed: () {},
             ),
-            NavButton(onTap: (){}, title: 'Profile',),
+            Expanded(
+              flex: 5,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  NavButton(
+                    onTap: () {},
+                    title: 'Product',
+                  ),
+                  NavButton(
+                    onTap: () {},
+                    title: 'Category',
+                  ),
+                  NavButton(
+                    onTap: () {},
+                    title: 'Orders',
+                  ),
+                  NavButton(
+                    onTap: () {},
+                    title: 'Cart',
+                  ),
+                ],
+              ),
+            ),
+            const Expanded(
+              flex: 10,
+              child: Card(
+                child: SizedBox(
+                  width: 180,
+                  height: 200,
+                ),
+              ),
+            ),
+            NavButton(
+              onTap: () {},
+              title: 'Profile',
+            ),
           ],
         ),
       ),
@@ -38,25 +61,28 @@ class SideNavBar extends StatelessWidget {
   }
 }
 
-
 class NavButton extends StatelessWidget {
   Function onTap;
   String title;
-  NavButton({Key? key , required this.onTap,required this.title}) : super(key: key);
+
+  NavButton({Key? key, required this.onTap, required this.title})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Center(
       child: TextButton(
-        onPressed: (){
+        onPressed: () {
           onTap();
         },
-        child:Padding(
+        child: Padding(
           padding: EdgeInsets.all(8.0),
-          child: Text(title,style: const TextStyle(color: Colors.black),),
+          child: Text(
+            title,
+            style: const TextStyle(color: Colors.black),
+          ),
         ),
       ),
     );
   }
 }
-
