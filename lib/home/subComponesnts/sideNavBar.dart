@@ -41,12 +41,12 @@ class SideNavBar extends StatelessWidget {
                 ],
               ),
             ),
-            const Expanded(
+            Expanded(
               flex: 10,
               child: Card(
-                child: SizedBox(
-                  width: 180,
-                  height: 200,
+                color: Colors.black12,
+                child: Container(
+                  color: Colors.brown,
                 ),
               ),
             ),

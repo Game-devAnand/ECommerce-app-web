@@ -17,6 +17,9 @@ class ProductPage extends StatelessWidget {
             child: Text("Popular Product",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27),),
           ),
           BestProductView(),
+          SizedBox(height:10),
+          AdsProducts(),
+          SizedBox(height:10),
           Padding(
             padding: EdgeInsets.all(8.0),
             child: Text("All Product",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27),),
@@ -141,15 +144,48 @@ class ProductCard extends StatelessWidget {
                 color: Colors.black12,
               ),
             ),
-            Column(
-              children: const [
-                Text("Name"),
-                Text("discription"),
-                Text("\$20"),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text("Name"),
+                      Text("discription"),
+                      Text("\$20"),
+                    ],
+                  ),
+                  Center(
+                    child: ElevatedButton(
+                      onPressed: (){},
+                      child: Text("ADD"),
+                    ),
+                  )
+                ],
+              ),
             )
           ],
         ),
+      ),
+    );
+  }
+}
+
+
+
+class AdsProducts extends StatelessWidget {
+  const AdsProducts({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const SizedBox(
+      width: 500,
+      height: 200,
+      child: Card(
+        color: Colors.blueGrey,
       ),
     );
   }
