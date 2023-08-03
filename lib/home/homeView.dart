@@ -12,9 +12,7 @@ class HomePageView extends StatelessWidget {
         child: Row(
           children: const [
             SideNavBar(),
-            SizedBox(width: 20,),
             Expanded(child: ProductPage()),
-            SizedBox(width: 20,),
           ],
         ),
       ),
