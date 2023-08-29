@@ -76,7 +76,7 @@ class NavButton extends StatelessWidget {
           onTap();
         },
         child: Padding(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Text(
             title,
             style: const TextStyle(color: Colors.black),
