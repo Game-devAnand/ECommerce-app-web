@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 
 import 'home/homeView.dart';
 
@@ -16,7 +17,7 @@ class AppPageNav extends StatefulWidget {
 class _AppPageNavState extends State<AppPageNav> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return const GetMaterialApp(
       home: HomePageView(),
     );
   }

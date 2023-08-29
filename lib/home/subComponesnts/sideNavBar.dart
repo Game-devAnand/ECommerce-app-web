@@ -1,5 +1,8 @@
+import 'package:ecommerce_web_project/Pages/Category.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
+import '../homeView.dart';
 class SideNavBar extends StatelessWidget {
   const SideNavBar({Key? key}) : super(key: key);
 
@@ -23,11 +26,15 @@ class SideNavBar extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   NavButton(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const HomePageView());
+                    },
                     title: 'Product',
                   ),
                   NavButton(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CategoryPage());
+                    },
                     title: 'Category',
                   ),
                   NavButton(
