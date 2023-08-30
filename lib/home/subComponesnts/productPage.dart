@@ -164,7 +164,52 @@ class ProductCard extends StatelessWidget {
                     ),
                     Center(
                       child: ElevatedButton(
-                        onPressed: (){},
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return AlertDialog(
+                                title: Text('Add to Cart'),
+                                content: Card(
+                                  child: Row(
+                                    children: <Widget>[
+                                      Card(
+                                        child: Container(
+                                          width: 300,
+                                          height: 300,
+                                          color: Colors.cyan,
+                                        ),
+                                      ),
+                                      Card(
+
+                                        elevation: 20,
+                                        child: SizedBox(
+                                          width: 300,
+                                          height: 300,
+                                          child: Column(
+                                            children: [
+                                              Text('Name'),
+                                              Text('Dis'),
+                                              Text('\$20'),
+                                            ],
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                actions: <Widget>[
+                                  ElevatedButton(
+                                    child: Text('Close'),
+                                    onPressed: () {
+                                      Navigator.of(context).pop();
+                                    },
+                                  ),
+                                ],
+                              );
+                            },
+                          );
+                        },
                         child: Text("ADD"),
                       ),
                     )
