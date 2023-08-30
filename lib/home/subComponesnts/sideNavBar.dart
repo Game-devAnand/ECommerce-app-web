@@ -2,6 +2,7 @@ import 'package:ecommerce_web_project/Pages/Category.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../Pages/CartPage.dart';
 import '../homeView.dart';
 class SideNavBar extends StatelessWidget {
   const SideNavBar({Key? key}) : super(key: key);
@@ -42,7 +43,9 @@ class SideNavBar extends StatelessWidget {
                     title: 'Orders',
                   ),
                   NavButton(
-                    onTap: () {},
+                    onTap: () {
+                      Get.to(const CartPage());
+                    },
                     title: 'Cart',
                   ),
                 ],
