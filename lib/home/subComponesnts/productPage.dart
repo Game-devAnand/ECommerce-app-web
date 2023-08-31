@@ -189,7 +189,7 @@ class ProductCard extends StatelessWidget {
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
-                                              Text('Name',),
+                                              Text('Name',style: TextStyle(fontWeight: FontWeight.bold),),
                                               Text('Dis'),
                                               Text('\$20'),
                                             ],
