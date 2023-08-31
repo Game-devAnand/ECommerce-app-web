@@ -187,6 +187,7 @@ class ProductCard extends StatelessWidget {
                                           width: 300,
                                           height: 300,
                                           child: Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
                                               Text('Name'),
                                               Text('Dis'),
