@@ -181,7 +181,6 @@ class ProductCard extends StatelessWidget {
                                         ),
                                       ),
                                       Card(
-
                                         elevation: 20,
                                         child: SizedBox(
                                           width: 300,
@@ -189,8 +188,8 @@ class ProductCard extends StatelessWidget {
                                           child: Column(
                                             mainAxisAlignment: MainAxisAlignment.center,
                                             children: [
-                                              Text('Name',style: TextStyle(fontWeight: FontWeight.bold),),
-                                              Text('Dis'),
+                                              Text('Name',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                                              Text('Dis',style: TextStyle(fontWeight: FontWeight.bold),),
                                               Text('\$20'),
                                             ],
                                           ),
