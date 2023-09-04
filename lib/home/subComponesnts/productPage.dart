@@ -236,6 +236,9 @@ class AdsProducts extends StatelessWidget {
       height: 200,
       child: Card(
         color: Colors.blueGrey,
+        child: Center(
+          child: Text("Ads",style: TextStyle(fontSize: 50,color: Colors.white),),
+        ),
       ),
     );
   }
